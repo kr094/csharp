@@ -1,0 +1,4 @@
+C:\repos\oopcsh_workspace\AsyncChatGUI\AsyncChat\bin\Debug\_AsyncChat.dll
+C:\repos\oopcsh_workspace\AsyncChatGUI\AsyncChat\bin\Debug\_AsyncChat.pdb
+C:\repos\oopcsh_workspace\AsyncChatGUI\AsyncChat\obj\Debug\_AsyncChat.dll
+C:\repos\oopcsh_workspace\AsyncChatGUI\AsyncChat\obj\Debug\_AsyncChat.pdb

@@ -1,0 +1,7 @@
+C:\repos\oopcsh_workspace\GraphicMazeGame\MazeGenerator\bin\Release\MazeGenerator.exe.config
+C:\repos\oopcsh_workspace\GraphicMazeGame\MazeGenerator\bin\Release\MazeGenerator.exe
+C:\repos\oopcsh_workspace\GraphicMazeGame\MazeGenerator\bin\Release\MazeGenerator.pdb
+C:\repos\oopcsh_workspace\GraphicMazeGame\MazeGenerator\obj\Release\MazeGenerator.Properties.Resources.resources
+C:\repos\oopcsh_workspace\GraphicMazeGame\MazeGenerator\obj\Release\MazeGenerator.csproj.GenerateResource.Cache
+C:\repos\oopcsh_workspace\GraphicMazeGame\MazeGenerator\obj\Release\MazeGenerator.exe
+C:\repos\oopcsh_workspace\GraphicMazeGame\MazeGenerator\obj\Release\MazeGenerator.pdb

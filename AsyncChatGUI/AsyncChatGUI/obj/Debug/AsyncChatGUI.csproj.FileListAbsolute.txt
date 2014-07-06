@@ -1,0 +1,11 @@
+C:\repos\oopcsh_workspace\AsyncChatGUI\AsyncChatGUI\bin\Debug\AsyncChatGUI.exe.config
+C:\repos\oopcsh_workspace\AsyncChatGUI\AsyncChatGUI\bin\Debug\AsyncChatGUI.exe
+C:\repos\oopcsh_workspace\AsyncChatGUI\AsyncChatGUI\bin\Debug\AsyncChatGUI.pdb
+C:\repos\oopcsh_workspace\AsyncChatGUI\AsyncChatGUI\obj\Debug\AsyncChatGUI.csprojResolveAssemblyReference.cache
+C:\repos\oopcsh_workspace\AsyncChatGUI\AsyncChatGUI\obj\Debug\AsyncChatGUI.Properties.Resources.resources
+C:\repos\oopcsh_workspace\AsyncChatGUI\AsyncChatGUI\obj\Debug\AsyncChatGUI.csproj.GenerateResource.Cache
+C:\repos\oopcsh_workspace\AsyncChatGUI\AsyncChatGUI\obj\Debug\AsyncChatGUI.exe
+C:\repos\oopcsh_workspace\AsyncChatGUI\AsyncChatGUI\obj\Debug\AsyncChatGUI.pdb
+C:\repos\oopcsh_workspace\AsyncChatGUI\AsyncChatGUI\obj\Debug\AsyncChatGUI.ClientForm.resources
+C:\repos\oopcsh_workspace\AsyncChatGUI\AsyncChatGUI\bin\Debug\LibSyncChat.dll
+C:\repos\oopcsh_workspace\AsyncChatGUI\AsyncChatGUI\bin\Debug\LibSyncChat.pdb

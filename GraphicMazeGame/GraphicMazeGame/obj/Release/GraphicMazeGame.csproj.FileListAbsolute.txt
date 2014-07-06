@@ -1,0 +1,12 @@
+C:\repos\oopcsh_workspace\GraphicMazeGame\GraphicMazeGame\bin\Release\GraphicMazeGame.exe.config
+C:\repos\oopcsh_workspace\GraphicMazeGame\GraphicMazeGame\bin\Release\GraphicMazeGame.exe
+C:\repos\oopcsh_workspace\GraphicMazeGame\GraphicMazeGame\bin\Release\GraphicMazeGame.pdb
+C:\repos\oopcsh_workspace\GraphicMazeGame\GraphicMazeGame\bin\Release\MazeGenerator.exe
+C:\repos\oopcsh_workspace\GraphicMazeGame\GraphicMazeGame\bin\Release\MazeGenerator.pdb
+C:\repos\oopcsh_workspace\GraphicMazeGame\GraphicMazeGame\obj\Release\GraphicMazeGame.csprojResolveAssemblyReference.cache
+C:\repos\oopcsh_workspace\GraphicMazeGame\GraphicMazeGame\obj\Release\GraphicMazeGame.GraphicMazeForm.resources
+C:\repos\oopcsh_workspace\GraphicMazeGame\GraphicMazeGame\obj\Release\GraphicMazeGame.Properties.Resources.resources
+C:\repos\oopcsh_workspace\GraphicMazeGame\GraphicMazeGame\obj\Release\GraphicMazeGame.csproj.GenerateResource.Cache
+C:\repos\oopcsh_workspace\GraphicMazeGame\GraphicMazeGame\obj\Release\GraphicMazeGame.exe
+C:\repos\oopcsh_workspace\GraphicMazeGame\GraphicMazeGame\obj\Release\GraphicMazeGame.pdb
+C:\repos\oopcsh_workspace\GraphicMazeGame\GraphicMazeGame\bin\Release\maze.txt

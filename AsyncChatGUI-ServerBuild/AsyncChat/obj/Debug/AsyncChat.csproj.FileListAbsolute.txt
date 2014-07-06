@@ -1,0 +1,5 @@
+C:\repos\oopcsh_workspace\AsyncChatGUI-ServerBuild\AsyncChat\bin\Debug\_AsyncChat.dll
+C:\repos\oopcsh_workspace\AsyncChatGUI-ServerBuild\AsyncChat\bin\Debug\_AsyncChat.pdb
+C:\repos\oopcsh_workspace\AsyncChatGUI-ServerBuild\AsyncChat\obj\Debug\_AsyncChat.dll
+C:\repos\oopcsh_workspace\AsyncChatGUI-ServerBuild\AsyncChat\obj\Debug\_AsyncChat.pdb
+C:\repos\oopcsh_workspace\AsyncChatGUI-ServerBuild\AsyncChat\obj\Debug\AsyncChat.csprojResolveAssemblyReference.cache

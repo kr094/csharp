@@ -1,0 +1,1 @@
+C:\repos\oopcsh_workspace\AsyncChatGUI\ServerGUI\bin\Debug\ServerGUI.exe.config
