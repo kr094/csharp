@@ -4,33 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-namespace forest
-{
-    class Forest
-    {
+namespace forest {
+    class Forest {
         static int WIDTH = 70;
         static int HEIGHT = 70;
         static int BOUND_WIDTH = WIDTH - 1;
         static int BOUND_HEIGHT = HEIGHT - 1;
+        static int SEARCH_RADIUS = 1;
+        static int TICK_DELAY_MS = 60;
         static Dictionary<String, double> CHANCE = new Dictionary<String, double>(){
-            {"FIRE", 0.001},
+            {"FIRE", 0.0005},
             {"GROWTH", 0.01},
+            {"SPAWN", 0.1},
         };
+
         enum CELL { EMPTY, TREE, HEATING, BURNING };
         private CELL[,] forest = new CELL[WIDTH, HEIGHT];
-        private Random rand;
+        private Random rand = new Random();
 
-        public Forest()
-        {
+        public Forest() {
             Console.CursorVisible = false;
-            this.rand = new Random();
             CELL cell;
-            for (int y = 0; y < HEIGHT; y++)
-            {
-                for (int x = 0; x < WIDTH; x++)
-                {
+            for (int y = 0; y < HEIGHT; y++) {
+                for (int x = 0; x < WIDTH; x++) {
                     cell = CELL.EMPTY;
-                    if (this.chance("GROWTH")) {
+                    if (this.chance("SPAWN")) {
                         cell = CELL.TREE;
                     }
                     this.forest[y, x] = cell;
@@ -38,30 +36,19 @@ namespace forest
             }
         }
 
-        public void run()
-        {
-            while (true)
-            {
-                this.tick();
+        public void run() {
+            while (true) {
+                this.update();
+                this.print();
             }
         }
 
-        public void tick()
-        {
-            this.update();
-            this.print();
-        }
-
-        public void update()
-        {
+        public void update() {
             CELL cell;
-            for (int y = 0; y < HEIGHT; y++)
-            {
-                for (int x = 0; x < WIDTH; x++)
-                {
+            for (int y = 0; y < HEIGHT; y++) {
+                for (int x = 0; x < WIDTH; x++) {
                     cell = this.forest[y, x];
-                    switch (cell)
-                    {
+                    switch (cell) {
                         case CELL.EMPTY:
                             if (this.chance("GROWTH")) {
                                 this.forest[y, x] = CELL.TREE;
@@ -90,47 +77,48 @@ namespace forest
         }
 
         private bool isNeighborBurning(int y, int x) {
-            if (y < BOUND_HEIGHT && this.forest[y+1, x] == CELL.BURNING) {
-                return true;
-            } else if (y > 0 && this.forest[y-1, x] == CELL.BURNING) {
-                return true;
-            } else if (x < BOUND_WIDTH && this.forest[y, x+1] == CELL.BURNING) {
-                return true;
-            } else if (x > 0 && this.forest[y, x-1] == CELL.BURNING) {
-                return true;
-            } else if (y > 0 && x > 0 && this.forest[y-1, x-1] == CELL.BURNING) {
-                return true;
-            } else if (y > 0 && x < BOUND_WIDTH && this.forest[y-1, x+1] == CELL.BURNING) {
-                return true;
-            } else if (y < BOUND_HEIGHT && x > 0 && this.forest[y+1, x-1] == CELL.BURNING) {
-                return true;
-            } else if (y < BOUND_HEIGHT && x < BOUND_WIDTH && this.forest[y+1, x+1] == CELL.BURNING) {
-                return true;
-            } else {
-                return false;
+            foreach (Tuple<int, int> pair in getNeighbors(y, x, SEARCH_RADIUS)) {
+                if (forest[pair.Item1, pair.Item2] == CELL.BURNING) {
+                    return true;
+                }
             }
+            return false;
+        }
+
+        private Tuple<int, int>[] getNeighbors(int srcY, int srcX, int radius) {
+            if (radius > WIDTH || radius > HEIGHT) {
+                throw new Exception("Radius is too large");
+            }
+            var neighbors = new List<Tuple<int, int>>();
+
+            for (int y = srcY - radius; y <= srcY + radius; y++) {
+                for (int x = srcX - radius; x <= srcX + radius; x++) {
+                    if (y < 0 || x < 0 || y > BOUND_HEIGHT || x > BOUND_WIDTH) {
+                        continue;
+                    }
+                    neighbors.Add(new Tuple<int, int>(y, x));
+                }
+            }
+            
+            return neighbors.ToArray();
         }
 
         private bool chance(string keyName) {
             return this.rand.NextDouble() < CHANCE[keyName];
         }
 
-        public void print()
-        {
+        public void print() {
             var buffer = new StringBuilder();
             char tree = ' ';
-            for (int y = 0; y < HEIGHT; y++)
-            {
-                for (int x = 0; x < WIDTH; x++)
-                {
-                    switch (this.forest[y, x])
-                    {
+            for (int y = 0; y < HEIGHT; y++) {
+                for (int x = 0; x < WIDTH; x++) {
+                    switch (this.forest[y, x]) {
                         case CELL.EMPTY:
                             tree = ' ';
                             break;
                         case CELL.TREE:
                         case CELL.HEATING:
-                            tree = '.';
+                            tree = '^';
                             break;
                         case CELL.BURNING:
                             tree = '*';
@@ -140,7 +128,7 @@ namespace forest
                 }
                 buffer.Append(Environment.NewLine);
             }
-            Thread.Sleep(60);
+            Thread.Sleep(TICK_DELAY_MS);
             Console.SetCursorPosition(0, 0);
             Console.Write(buffer.ToString());
         }
